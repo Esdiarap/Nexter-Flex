@@ -111,5 +111,13 @@
         </div>
     </div>
 </div>
+<script>
+    let accordion = document.querySelector('.accordion')
+    accordion.addEventListener('click', e => {
+        const item = e.target
+        const itemDiv = item.closest('.item')
+        itemDiv.classList.toggle('open')
+    })
+</script>
 </body>
 </html>

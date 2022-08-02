@@ -35,6 +35,9 @@ body {
   column-gap: 24px;
   row-gap: 32px;
   align-items: center;
+
+  // 给border-top加透明
+  border-top: 4px solid transparent;
 }
 
 .icon {
@@ -57,7 +60,12 @@ body {
 .hidden-box {
   /*grid-column: 2 / 3;*/
   grid-column: 2;
-  display: none;
+  //display: none;
+  // 动画效果
+  overflow: hidden;
+  max-height: 0;
+  transition: all 1s;
+  //transform: translateY(-100%);
 }
 
 .hidden-box p {
@@ -79,6 +87,11 @@ body {
 
 .open .hidden-box {
   display: block;
+
+  // 动画效果
+  transition: all 1s;
+  //transform: translateY(0);
+  max-height: 200px;
 }
 
 .open .number,
